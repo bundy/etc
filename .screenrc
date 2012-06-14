@@ -1,0 +1,30 @@
+startup_message off
+nethack off
+vbell on
+deflogin off
+vbell_msg "o_O"
+defscrollback 100000
+hardstatus off
+shell bash
+
+termcapinfo vt100 dl=5\E[M
+hardstatus string "%h%? users: %u%?"
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+defnonblock 5
+termcapinfo xterm*|linux*|rxvt*|Eterm* OP
+termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+
+caption string "%{=b}%{kw} %n - %t"
+hardstatus alwayslastline "%{=br}%{kw} [%n - %t] %{-rb}  %W %=%H  %D %M %d %Y %C %A"
+
+# Remove some stupid / dangerous key bindings
+bind ^k
+bind ^\
+bind \\ quit
+bind K kill
+bind I login on
+bind O login off
+bind } history
+
+# Make scroll wheel work
+termcapinfo xterm* ti@:te@
