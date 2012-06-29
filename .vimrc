@@ -16,7 +16,7 @@ set swb=useopen
 set bufhidden=hide
 colorscheme wombat
 set t_Co=256
-set guifont=Monospace\ 8.5
+set guifont=Inconsolata-dz\ for\ Powerline:h11
 set wmh=0
 set clipboard=unnamed " Map default register to sys clipboard
 set complete=.,w,b,u
@@ -90,5 +90,8 @@ nmap <leader>b :bn<CR>                   " Go to the next buffer
 "--- Plugin Specific ---
 
 nmap <leader>x :Bd<CR>                   " kwbd.vim
-let g:miniBufExplMapCTabSwitchBufs = 1   " minibufexpl.vim
+let g:miniBufExplMapCTabSwitchBufs=1     " minibufexpl.vim
 nmap <leader>n :NumbersToggle<CR>        " numbers.vim
+
+set laststatus=2                         " vim-powerline
+let g:Powerline_symbols = 'fancy'
