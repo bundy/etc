@@ -91,3 +91,4 @@ nmap <leader>b :bn<CR>                   " Go to the next buffer
 
 nmap <leader>x :Bd<CR>                   " kwbd.vim
 let g:miniBufExplMapCTabSwitchBufs = 1   " minibufexpl.vim
+nmap <leader>n :NumbersToggle<CR>        " numbers.vim
