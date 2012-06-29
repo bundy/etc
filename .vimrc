@@ -7,33 +7,38 @@ set ruler
 set incsearch
 set hlsearch
 set ignorecase
-set cursorline        " Highlight current line
+set cursorline               " Highlight current line
 set backspace=2
 set nocompatible
 set hidden
 set noea
 set swb=useopen
 set bufhidden=hide
-colorscheme wombat
+
+colorscheme wombat256mod     " set font to 256 version if regular vim
+if has("gui_running")
+    colorscheme wombat
+endif
+
 set t_Co=256
 set guifont=Inconsolata-dz\ for\ Powerline:h11
 set wmh=0
-set clipboard=unnamed " Map default register to sys clipboard
+set clipboard=unnamed        " Map default register to sys clipboard
 set complete=.,w,b,u
 filetype plugin on
-set nobackup          " Disable ~backups
+set nobackup                 " Disable ~backups
 "set nowritebackup
 "set directory=~/.vim/swp//
-"set undofile         " Uncomment for persistent undo history (vim 7.3+)
+"set undofile                " Uncomment for persistent undo history (vim 7.3+)
 "set undodir=~/.vim/undo//
 set statusline=\ \ %F\ %m%=buffer\ %n\ \|\ line\ %l\ col\ %c\ [%P]\ 
 
 "---- gVim Specific ----
 
-set guioptions-=T     " Hide toolbar
-"set guioptions-=r    " Hide right scrollbar
-"set guioptions-=m    " Hide menubar
-set winaltkeys=no     " Disable menu access w/ALT
+set guioptions-=T            " Hide toolbar
+"set guioptions-=r           " Hide right scrollbar
+"set guioptions-=m           " Hide menubar
+set winaltkeys=no            " Disable menu access w/ALT
 
 syntax sync minlines=1000 " Sync highlighting up to 1000 characters in the file
 
@@ -45,11 +50,11 @@ set nosmartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-filetype indent off   " I INDENT MY OWN CODE
+filetype indent off          " I INDENT MY OWN CODE
 
 "---- Misc ----
 hi ColorColumn ctermbg=235 guibg=#272727
-set colorcolumn=80    " PEP8 color column (vim 7.3+)
+set colorcolumn=80           " PEP8 color column (vim 7.3+)
 
 " highlight unecessary whitespace
 highlight ExtraWhiteSpace ctermbg=red guibg=red
