@@ -31,7 +31,6 @@ set nobackup                 " Disable ~backups
 "set directory=~/.vim/swp//
 "set undofile                " Uncomment for persistent undo history (vim 7.3+)
 "set undodir=~/.vim/undo//
-set statusline=\ \ %F\ %m%=buffer\ %n\ \|\ line\ %l\ col\ %c\ [%P]\ 
 
 "---- gVim Specific ----
 
@@ -40,7 +39,7 @@ set guioptions-=T            " Hide toolbar
 "set guioptions-=m           " Hide menubar
 set winaltkeys=no            " Disable menu access w/ALT
 
-syntax sync minlines=1000 " Sync highlighting up to 1000 characters in the file
+syntax sync minlines=1000    " Sync highlighting up to 1000 characters in the file
 
 "---- Indent Settings ----
 
@@ -53,6 +52,7 @@ set expandtab
 filetype indent off          " I INDENT MY OWN CODE
 
 "---- Misc ----
+
 hi ColorColumn ctermbg=235 guibg=#272727
 set colorcolumn=80           " PEP8 color column (vim 7.3+)
 
@@ -65,7 +65,7 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 "---- Bindings ----
 
-let mapleader = ","
+let mapleader = ","          " Set leader to , for convenience
 let g:mapleader = ","
 
 " Make jk traverse wrapped lines
@@ -77,14 +77,6 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-" Bindings for resizing splits
-"map <A-j> <C-W>-
-"map <A-k> <C-W>+
-"map <A-l> 5<C-W>>
-"map <A-h> 5<C-W><
-"map <A-m> 1000<C-W><
-"map <C-m> 80<C-W>>
 
 nnoremap ' `
 nnoremap ` '
