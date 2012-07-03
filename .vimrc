@@ -14,6 +14,7 @@ set hidden
 set noea
 set swb=useopen
 set bufhidden=hide
+set nosol                    " remember column pos when moving up/down
 
 colorscheme wombat256mod     " set font to 256 version if regular vim
 if has("gui_running")
