@@ -82,14 +82,24 @@ map <C-l> <C-W>l
 nnoremap ' `
 nnoremap ` '
 
-nmap <leader>cs :let @/=""<CR>           " Clear highlighted search
-nmap <leader>b :bn<CR>                   " Go to the next buffer
+" Clear highlighted search
+nmap <leader>cs :let @/=""<CR>
+
+" Go to the next buffer
+nmap <leader>b :bn<CR>
 
 "--- Plugin Specific ---
 
-nmap <leader>x :Bd<CR>                   " kwbd.vim
 let g:miniBufExplMapCTabSwitchBufs=1     " minibufexpl.vim
-nmap <leader>n :NumbersToggle<CR>        " numbers.vim
 
 set laststatus=2                         " vim-powerline
 let g:Powerline_symbols = 'fancy'
+
+" kwbd.vim
+nmap <leader>x :Bd<CR>
+
+" numbers.vim
+nmap <leader>n :NumbersToggle<CR>
+
+" scratchtoggle.vim
+nmap <leader>s :ScratchToggle<CR>
