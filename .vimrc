@@ -98,8 +98,5 @@ let g:Powerline_symbols = 'fancy'
 " kwbd.vim
 nmap <leader>x :Bd<CR>
 
-" numbers.vim
-nmap <leader>n :NumbersToggle<CR>
-
 " scratchtoggle.vim
 nmap <leader>s :ScratchToggle<CR>
