@@ -22,7 +22,15 @@ if has("gui_running")
 endif
 
 set t_Co=256
-set guifont=Inconsolata-dz\ for\ Powerline:h11
+
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 9
+    else
+        set guifont=Inconsolata-dz\ for\ Powerline:h11
+    endif
+endif
+
 set wmh=0
 set clipboard=unnamed        " Map default register to sys clipboard
 set complete=.,w,b,u
