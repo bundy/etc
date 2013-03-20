@@ -14,6 +14,7 @@
     c = commit
     co = checkout
     lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [color]
     ui = auto
