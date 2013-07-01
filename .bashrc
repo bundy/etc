@@ -5,6 +5,7 @@ alias ls="ls -al"
 alias ps="ps -aux"
 alias rmpyc="find . -name '*.pyc' -delete"
 alias src="cd ~/src"
+alias pymail="python -m smtpd -n -c DebuggingServer localhost:1025"
 
 # virtualenv
 export VIRTUALENV_USE_DISTRIBUTE=1
