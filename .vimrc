@@ -32,7 +32,7 @@ if has("gui_running")
 endif
 
 set wmh=0
-set clipboard=unnamed        " Map default register to sys clipboard
+set clipboard=unnamedplus    " Map default register to sys clipboard
 set complete=.,w,b,u
 filetype plugin on
 set nobackup                 " Disable ~backups
@@ -43,6 +43,7 @@ set nobackup                 " Disable ~backups
 
 "---- gVim Specific ----
 
+set mouse=a
 set guioptions-=T            " Hide toolbar
 "set guioptions-=r           " Hide right scrollbar
 "set guioptions-=m           " Hide menubar
@@ -76,6 +77,10 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 let mapleader = ","          " Set leader to , for convenience
 let g:mapleader = ","
+
+" Make y also copy to system keyboard
+nnoremap y "+y
+vnoremap y "+y
 
 " Make jk traverse wrapped lines
 nmap j gj
