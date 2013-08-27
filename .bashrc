@@ -13,3 +13,10 @@ export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
+
+# functions
+function cdp () {
+  cd "$(python -c "import os.path as _, ${1}; \
+      print _.dirname(_.realpath(${1}.__file__[:-1]))"
+      )"
+}
