@@ -74,6 +74,12 @@ au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
+highlight Tabs ctermbg=red guibg=red
+au ColorScheme * highlight Tabs guibg=red
+au BufEnter * match Tabs /\t\+/
+au InsertEnter * match Tabs /\t\+\%#\@<!/
+au InsertLeave * match Tabs /\t\+/
+
 "---- Bindings ----
 
 let mapleader = ","          " Set leader to , for convenience
