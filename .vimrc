@@ -70,15 +70,9 @@ set colorcolumn=80           " PEP8 color column (vim 7.3+)
 " highlight unecessary whitespace
 highlight ExtraWhiteSpace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
-au BufEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhiteSpace /\s\+$/
-
-highlight Tabs ctermbg=red guibg=red
-au ColorScheme * highlight Tabs guibg=red
-au BufEnter * match Tabs /\t\+/
-au InsertEnter * match Tabs /\t\+\%#\@<!/
-au InsertLeave * match Tabs /\t\+/
+au BufEnter * match ExtraWhitespace /\s\+$\|\t\+/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$\|\t\+/
+au InsertLeave * match ExtraWhiteSpace /\s\+$\|\t\+/
 
 "---- Bindings ----
 
