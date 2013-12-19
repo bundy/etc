@@ -114,3 +114,6 @@ nmap <leader>x :Bd<CR>
 
 " scratchtoggle.vim
 nmap <leader>s :ScratchToggle<CR>
+
+" ctrlp buffer mode
+map <C-b> :CtrlPBuffer<CR>
