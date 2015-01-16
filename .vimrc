@@ -101,6 +101,8 @@ nmap <leader>cs :let @/=""<CR>
 
 " Go to the next buffer
 nmap <leader>b :bn<CR>
+nmap <C-Tab> :bn<CR>
+nmap <C-S-Tab> :bp<CR>
 
 "--- Plugin Specific ---
 
@@ -115,5 +117,6 @@ nmap <leader>x :Bd<CR>
 " scratchtoggle.vim
 nmap <leader>s :ScratchToggle<CR>
 
-" ctrlp buffer mode
+" ctrlp
 map <C-b> :CtrlPBuffer<CR>
+let g:ctrlp_working_path_mode = 0
