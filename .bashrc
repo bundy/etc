@@ -7,7 +7,7 @@ alias ack="ack-grep -i -r -a"
 alias rmpyc="find . -name '*.pyc' -delete"
 alias src="cd ~/src"
 alias pymail="python -m smtpd -n -c DebuggingServer localhost:1025"
-alias diffcs="git diff HEAD -- "*.cs"
+alias diffcs="git diff HEAD -- '*.cs'"
 
 # virtualenv
 export VIRTUALENV_USE_DISTRIBUTE=1
