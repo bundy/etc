@@ -104,6 +104,9 @@ nmap <leader>b :bn<CR>
 nmap <C-Tab> :bn<CR>
 nmap <C-S-Tab> :bp<CR>
 
+" Copy paste shortcut
+imap <C-v> <ESC>"+gP
+
 "--- Plugin Specific ---
 
 let g:miniBufExplMapCTabSwitchBufs=1     " minibufexpl.vim
